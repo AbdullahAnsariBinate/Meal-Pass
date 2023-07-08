@@ -1,0 +1,144 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.meal"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->[:react-native-haptic-feedback] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/react-native-haptic-feedback/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-66
+12-->[:react-native-haptic-feedback] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/react-native-haptic-feedback/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-63
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-81
+13-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:22-78
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-80
+14-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:22-77
+15
+16    <queries>
+16-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:14:5-20:15
+17
+18        <!-- Query open documents -->
+19        <intent>
+19-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:17:9-19:18
+20            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+20-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-79
+20-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:18:21-76
+21        </intent>
+22    </queries>
+23
+24    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+24-->[com.android.installreferrer:installreferrer:1.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/913f41e8a75d21c29d51386206a6c93e/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+24-->[com.android.installreferrer:installreferrer:1.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/913f41e8a75d21c29d51386206a6c93e/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
+25
+26    <application
+26-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:7:5-26:19
+27        android:name="com.meal.MainApplication"
+27-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:8:7-38
+28        android:allowBackup="false"
+28-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:12:7-34
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.7.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/c8b682e3f1706e3da8074471d13e694a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+30        android:icon="@mipmap/ic_launcher"
+30-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:10:7-41
+31        android:label="@string/app_name"
+31-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:9:7-39
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:11:7-52
+33        android:theme="@style/AppTheme" >
+33-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:13:7-38
+34        <activity
+34-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:14:7-25:18
+35            android:name="com.meal.MainActivity"
+35-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:15:9-37
+36            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+36-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:17:9-118
+37            android:exported="true"
+37-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:20:9-32
+38            android:label="@string/app_name"
+38-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:16:9-41
+39            android:launchMode="singleTask"
+39-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:18:9-40
+40            android:windowSoftInputMode="adjustResize" >
+40-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:19:9-51
+41            <intent-filter>
+41-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:21:9-24:25
+42                <action android:name="android.intent.action.MAIN" />
+42-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:22:13-65
+42-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:22:21-62
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:23:13-73
+44-->/Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/android/app/src/main/AndroidManifest.xml:23:23-70
+45            </intent-filter>
+46        </activity>
+47        <activity
+47-->[:react-native-navigation] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/react-native-navigation/lib/android/app/build/intermediates/merged_manifest/reactNative68Release/AndroidManifest.xml:10:9-12:40
+48            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+48-->[:react-native-navigation] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/react-native-navigation/lib/android/app/build/intermediates/merged_manifest/reactNative68Release/AndroidManifest.xml:11:13-77
+49            android:exported="false" />
+49-->[:react-native-navigation] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/react-native-navigation/lib/android/app/build/intermediates/merged_manifest/reactNative68Release/AndroidManifest.xml:12:13-37
+50
+51        <provider
+51-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:23:9-32:20
+52            android:name="expo.modules.filesystem.FileSystemFileProvider"
+52-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-74
+53            android:authorities="com.meal.FileSystemFileProvider"
+53-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:25:13-74
+54            android:exported="false"
+54-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:26:13-37
+55            android:grantUriPermissions="true" >
+55-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:27:13-47
+56            <meta-data
+56-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:29:13-31:70
+57                android:name="android.support.FILE_PROVIDER_PATHS"
+57-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:30:17-67
+58                android:resource="@xml/file_system_provider_paths" />
+58-->[:expo-file-system] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-file-system/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:31:17-67
+59        </provider>
+60
+61        <meta-data
+61-->[:expo-modules-core] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-12:89
+62            android:name="org.unimodules.core.AppLoader#react-native-headless"
+62-->[:expo-modules-core] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-79
+63            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+63-->[:expo-modules-core] /Users/isekaitechnologies/Documents/GitHub/Meal-Pass-React-Native/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-86
+64        <meta-data
+64-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/fa272cbcd3f57b9cd323c85adf1768d7/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:11:9-13:43
+65            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+65-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/fa272cbcd3f57b9cd323c85adf1768d7/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:12:13-84
+66            android:value="GlideModule" />
+66-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/fa272cbcd3f57b9cd323c85adf1768d7/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:13:13-40
+67
+68        <provider
+68-->[androidx.emoji2:emoji2:1.0.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/4ee2b788e881bbcf551ff191d3c948a2/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+69            android:name="androidx.startup.InitializationProvider"
+69-->[androidx.emoji2:emoji2:1.0.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/4ee2b788e881bbcf551ff191d3c948a2/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+70            android:authorities="com.meal.androidx-startup"
+70-->[androidx.emoji2:emoji2:1.0.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/4ee2b788e881bbcf551ff191d3c948a2/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+71            android:exported="false" >
+71-->[androidx.emoji2:emoji2:1.0.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/4ee2b788e881bbcf551ff191d3c948a2/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+72            <meta-data
+72-->[androidx.emoji2:emoji2:1.0.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/4ee2b788e881bbcf551ff191d3c948a2/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+73-->[androidx.emoji2:emoji2:1.0.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/4ee2b788e881bbcf551ff191d3c948a2/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+74                android:value="androidx.startup" />
+74-->[androidx.emoji2:emoji2:1.0.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/4ee2b788e881bbcf551ff191d3c948a2/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+75            <meta-data
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/bb578ab5f81a8790625f96335336ab40/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+76                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/bb578ab5f81a8790625f96335336ab40/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+77                android:value="androidx.startup" />
+77-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/isekaitechnologies/.gradle/caches/transforms-3/bb578ab5f81a8790625f96335336ab40/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+78        </provider>
+79    </application>
+80
+81</manifest>

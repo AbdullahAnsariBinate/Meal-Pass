@@ -1,0 +1,94 @@
+diff --git a/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.d.ts b/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.d.ts
+index c1a2101..7d240f9 100644
+--- a/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.d.ts
++++ b/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.d.ts
+@@ -3,6 +3,7 @@
+  * @description An animated drawer component for react-native-navigation.
+  */
+ import * as React from 'react';
++import { ViewStyle } from 'react-native';
+ import { Layout } from 'react-native-navigation';
+ declare interface RNNDrawerOptions {
+     /**
+@@ -51,6 +52,8 @@ declare interface RNNDrawerOptions {
+     drawerScreenHeight?: number | string;
+     disableDragging?: boolean;
+     disableSwiping?: boolean;
++
++    style: ViewStyle
+ }
+ export declare enum DirectionType {
+     left = "left",
+diff --git a/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.js b/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.js
+index a94aae1..e766903 100644
+--- a/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.js
++++ b/node_modules/react-native-navigation-drawer-extension/lib/RNNDrawer.js
+@@ -17,7 +17,7 @@ var __extends = (this && this.__extends) || (function () {
+     };
+ })();
+ var __assign = (this && this.__assign) || function () {
+-    __assign = Object.assign || function(t) {
++    __assign = Object.assign || function (t) {
+         for (var s, i = 1, n = arguments.length; i < n; i++) {
+             s = arguments[i];
+             for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+@@ -220,7 +220,7 @@ var RNNDrawer = /** @class */ (function () {
+                 /** Props */
+                 var _a = this.props, direction = _a.direction, fadeOpacity = _a.fadeOpacity;
+                 // Adapt the drawer's size on orientation change
+-                react_native_1.Dimensions.addEventListener('change', this.onOrientationChange);
++                this.dimensionListener = react_native_1.Dimensions.addEventListener('change', this.onOrientationChange);
+                 // Executes when the side of the screen interaction starts
+                 this.unsubscribeSwipeStart = events_1.listen('SWIPE_START', function (value) {
+                     _this.panningStartedPoint.moveX = value.moveX;
+@@ -326,7 +326,7 @@ var RNNDrawer = /** @class */ (function () {
+              * Removes all the listenrs from this component
+              */
+             WrappedDrawer.prototype.removeListeners = function () {
+-                react_native_1.Dimensions.removeEventListener('change', this.onOrientationChange);
++                if (this.dimensionListener) this.dimensionListener.remove();
+                 if (this.unsubscribeSwipeStart)
+                     this.unsubscribeSwipeStart();
+                 if (this.unsubscribeSwipeMove)
+@@ -354,11 +354,14 @@ var RNNDrawer = /** @class */ (function () {
+                     : { translateY: sideMenuOpenValue };
+                 return (React.createElement(react_native_1.View, __assign({ style: sideMenuContainerStyle }, this.panResponder.panHandlers),
+                     React.createElement(react_native_1.TouchableWithoutFeedback, { onPress: this.touchedOutside },
+-                        React.createElement(react_native_1.Animated.View, { style: [
++                        React.createElement(react_native_1.Animated.View, {
++                            style: [
+                                 sideMenuOverlayStyle,
+                                 { opacity: sideMenuOverlayOpacity },
+-                            ] })),
+-                    React.createElement(react_native_1.Animated.View, { style: [
++                            ]
++                        })),
++                    React.createElement(react_native_1.Animated.View, {
++                        style: [
+                             { backgroundColor: '#FFF' },
+                             style,
+                             {
+@@ -366,7 +369,8 @@ var RNNDrawer = /** @class */ (function () {
+                                 width: this.drawerWidth,
+                                 transform: [animatedValue],
+                             },
+-                        ] },
++                        ]
++                    },
+                         React.createElement(Component, __assign({}, this.props)))));
+             };
+             /**
+@@ -433,9 +437,11 @@ var RNNDrawer = /** @class */ (function () {
+         var _a, _b, _c, _d, _e;
+         // By default for this library, we make the 'componentBackgroundColor' transparent
+         var componentBackgroundColor = (_d = (_c = (_b = (_a = layout === null || layout === void 0 ? void 0 : layout.component) === null || _a === void 0 ? void 0 : _a.options) === null || _b === void 0 ? void 0 : _b.layout) === null || _c === void 0 ? void 0 : _c.componentBackgroundColor) !== null && _d !== void 0 ? _d : 'transparent';
+-        var options = __assign(__assign({}, (_e = layout === null || layout === void 0 ? void 0 : layout.component) === null || _e === void 0 ? void 0 : _e.options), { layout: {
++        var options = __assign(__assign({}, (_e = layout === null || layout === void 0 ? void 0 : layout.component) === null || _e === void 0 ? void 0 : _e.options), {
++            layout: {
+                 componentBackgroundColor: componentBackgroundColor,
+-            } });
++            }
++        });
+         // Mutate options to add 'transparent' by default
+         // @ts-ignore
+         layout.component.options = __assign({}, options);

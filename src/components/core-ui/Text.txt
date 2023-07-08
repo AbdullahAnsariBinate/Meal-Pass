@@ -1,0 +1,82 @@
+import React, { useMemo } from 'react';
+import {
+    StyleSheet,
+    TextProps as NativeTextProps,
+    TextStyle,
+    Text as PaperText,
+} from 'react-native';
+import { useTheme } from 'react-native-paper';
+import { theme } from '../../utils/constants';
+import Animated from 'react-native-reanimated';
+
+const AnimatedPaperText = Animated.createAnimatedComponent(PaperText);
+
+type Props = NativeTextProps & {
+    uppercase?: boolean;
+    weight?: 'bold' | 'medium' | 'normal';
+    fontStyle?: 'normal' | 'italic';
+    entering?: any;
+    exiting?: any;
+};
+
+function resolveTextStyle(
+    fonts: ReactNativePaper.ThemeFonts,
+    fontWeight: 'bold' | 'medium' | 'normal',
+    fontStyle: 'normal' | 'italic',
+): TextStyle | undefined {
+    let useItalicPreset = fontStyle === 'italic';
+
+    let fontFamily = useItalicPreset
+        ? theme.font.light_italic
+        : theme.font.regular;
+
+
+    switch (fontWeight) {
+        case 'bold':
+            fontFamily = theme.font.bold;
+            break;
+        case 'medium':
+            fontFamily = theme.font.medium;
+            break;
+    }
+
+    return {
+        fontFamily,
+    };
+}
+
+export default function Text(props: Props) {
+    let {
+        uppercase: isUppercase,
+        weight = 'normal',
+        fontStyle = 'normal',
+        style,
+        ...otherProps
+    } = props;
+    let { colors, fonts } = useTheme();
+
+    let resolvedTextStyle = useMemo(
+        () => resolveTextStyle(fonts, weight, fontStyle),
+        [fonts, weight, fontStyle],
+    );
+
+    return (
+        <AnimatedPaperText
+            {...otherProps}
+            entering={props.entering}
+            exiting={props.exiting}
+            style={[
+                resolvedTextStyle,
+                { color: colors.text },
+                isUppercase && styles.uppercaseLabel,
+                style,
+            ]}
+        />
+    );
+}
+
+const styles = StyleSheet.create({
+    uppercaseLabel: {
+        textTransform: 'uppercase',
+    },
+});
